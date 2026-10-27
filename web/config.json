@@ -1,0 +1,35 @@
+{
+  "common": {
+    "tiles": [
+      { "id": "trinity", "find": "trinity", "title": "Trinity", "caption": "Телеканали" },
+      { "id": "youtube", "pkg": "com.google.android.youtube.tv", "title": "YouTube", "caption": "Відео" },
+      { "id": "browser", "pkg": "com.internet.tvbrowser", "title": "Браузер", "caption": "Пошук і сайти", "fallback": "browser", "art": "browser.svg" },
+      { "id": "play", "pkg": "com.android.vending", "title": "Play Маркет", "caption": "Програми" }
+    ],
+    "maps": {
+      "neptun": {
+        "title": "Карта NEPTUN",
+        "url": "https://neptun.in.ua/embed/map",
+        "script": "pages/neptun.js",
+        "hint": "Стрілки: рухати карту  ·  OK: Житомирщина й Київщина / вся Україна  ·  Назад: вийти",
+        "label": "NEPTUN · онлайн-моніторинг, не офіційне оповіщення",
+        "reload": 15
+      },
+      "alerts": {
+        "title": "Карта alerts.in.ua",
+        "url": "https://alerts.in.ua/",
+        "hint": "Стрілки: прокрутка  ·  Назад: вийти",
+        "label": "alerts.in.ua · онлайн-моніторинг, не офіційне оповіщення",
+        "reload": 15
+      }
+    },
+    "screensavers": [
+      { "id": "fireplace", "title": "Камін", "video": "media/fireplace.webm", "clock": true, "credit": "Відео: free video library, CC BY 3.0" },
+      { "id": "map", "title": "Карта тривог", "url": "https://neptun.in.ua/embed/map", "script": "pages/neptun.js", "clock": true, "label": "NEPTUN · онлайн-моніторинг, не офіційне оповіщення", "reload": 15 }
+    ],
+    "screensaver": "fireplace",
+    "queue": "3.1"
+  },
+  "kitchen": {},
+  "bedroom": {}
+}

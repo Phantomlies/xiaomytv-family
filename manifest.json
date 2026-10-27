@@ -1,0 +1,102 @@
+{
+  "format": 1,
+  "repo": "Phantomlies/xiaomytv-family",
+  "serial": 1793144146,
+  "note": "Перша версія: камін на заставці, вибір заставки в меню",
+  "createdAt": "2026-10-27T23:35:46.749Z",
+  "minApk": 31000,
+  "web": {
+    "bg/dawn.jpg": {
+      "sha256": "578c3e9d76ac9e108d8c99aace23ec27b51f5cf731fe84da0a62f7e246abafd2",
+      "size": 372632
+    },
+    "bg/festive-day.jpg": {
+      "sha256": "95b9816018b310b41c40c8b06595b3763a1a09f7f8811b81b2a11b97046a4763",
+      "size": 358528
+    },
+    "bg/festive-night.jpg": {
+      "sha256": "6c47f44d7df16b4d0700cb0b972c26a05d3fc02dfdcbc6f548669ad904c2e1f6",
+      "size": 408644
+    },
+    "bg/lake.jpg": {
+      "sha256": "c9432091a2dc31931e8c2d4654da35da1a70e6e3df8fd513d00e7b181cdd1ce1",
+      "size": 385629
+    },
+    "bg/sunset.jpg": {
+      "sha256": "a2da11e7ca30462b6b45d0418bf41e4976ea302630899612b4788eeea4bebce5",
+      "size": 373238
+    },
+    "bg/valley.jpg": {
+      "sha256": "0cd8a7d92508f48876a70ce0992abaf5aab5b7a9b4f29ae3d73d444f3f3c8166",
+      "size": 335105
+    },
+    "browser.svg": {
+      "sha256": "a8cfc9017faf711b857c984f960aaf26a961e3671c853bc1ab59bec4e106f247",
+      "size": 921
+    },
+    "config.json": {
+      "sha256": "37bb16c8aad660f1239eb5fe85af799ad5c4c44cfbff8fd586a4fcabca487af4",
+      "size": 1859
+    },
+    "home.css": {
+      "sha256": "e4a08be3f7abf147bcfbca1f4cdab767ac15486d7d1d78cd9352fb740d16b781",
+      "size": 9175
+    },
+    "home.js": {
+      "sha256": "9e5b92fa5fcab028880988bdf1f11ca5f98d5c1a0e8e34179d94505ce4900596",
+      "size": 28519
+    },
+    "index.html": {
+      "sha256": "b15d7f72e67be6737a186856a4306b81def92ca0440636b50c558e64855e75da",
+      "size": 6319
+    },
+    "pages/neptun.js": {
+      "sha256": "dae21a706a480f8d8c6308f171a0fe13ddb273202a3be99c3fcbc1a43fb46aec",
+      "size": 1022
+    },
+    "power.js": {
+      "sha256": "6cd390de58cc1c655dc915aa4127d97e892aaad6e204ac9c2e592729b1578ef2",
+      "size": 5356
+    },
+    "weather/clear-day.jpg": {
+      "sha256": "8e9f574c5f413704b8fa3a610160f22fd57493085e75e2de5036d593a6b97f83",
+      "size": 37358
+    },
+    "weather/clear-night.jpg": {
+      "sha256": "7458c1eb8147188873cdcd96e1f7b461f7b61aa5be2fd4a4e5cb29516e2adbf7",
+      "size": 39444
+    },
+    "weather/fog.jpg": {
+      "sha256": "7507c0dadccc39e1a6aa7aefb733bc29c07c4dffe39c6e225ac604ad5e7ff9d0",
+      "size": 36941
+    },
+    "weather/overcast.jpg": {
+      "sha256": "123ed35cb50824276013ec01bedc708b475101935ccc6d21f0563dc52e646bbf",
+      "size": 37480
+    },
+    "weather/partly-day.jpg": {
+      "sha256": "fb7c36e2c5c695edcd4da509a4ee98c5bc9f376d62bd022cb47cf47fcb6fbad7",
+      "size": 39680
+    },
+    "weather/partly-night.jpg": {
+      "sha256": "80e8aa085bbec648705ff0faa33bc227487bd36b8f81cd3831c14939a79cba7e",
+      "size": 39834
+    },
+    "weather/rain.jpg": {
+      "sha256": "b66c33be10f624fe1bdc4da928b2308ded06f1acc8c347ddc62a2e50cfe47912",
+      "size": 46286
+    },
+    "weather/snow.jpg": {
+      "sha256": "a9b88da5a05887c7f4c63b07d1b77baec916ab392997a11ad32072062c7864ef",
+      "size": 43438
+    },
+    "weather/storm.jpg": {
+      "sha256": "1c46adff20e7ef89d1e5d7b7647bedca9626b1b1e2b3211989d7f507e14d2db7",
+      "size": 43184
+    },
+    "media/fireplace.webm": {
+      "sha256": "0d8094ccd902b986c16d453d7167664536b51978607a2c737e76f0220ce6bea5",
+      "size": 19112791
+    }
+  }
+}

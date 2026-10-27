@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="uk"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; connect-src 'self'; frame-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<title>Xiaomi TV · Родина</title><link rel="stylesheet" href="home.css">
+</head><body>
+<main id="home">
+  <div id="bg"></div><div class="shade"></div>
+  <header>
+    <div class="clockbox">
+      <div id="clock">--:--</div>
+      <div class="when"><span id="date">Завантаження</span><span class="dot">·</span><span>Коростишів</span></div>
+    </div>
+    <button id="weather" class="card weather" data-ui="settings" aria-label="Погода в Коростишеві">
+      <span class="weather-photo" id="weather-photo"></span>
+      <span class="weather-body">
+        <strong id="temperature">··°</strong>
+        <span id="weather-text">Погода завантажується</span>
+        <small id="weather-range">Open-Meteo</small>
+      </span>
+    </button>
+    <button id="rates" class="card rates" data-ui="settings" aria-label="Курси валют">
+      <span class="rate"><span class="code usd">$</span><span class="name">Долар</span><b id="usd">··</b></span>
+      <span class="rate"><span class="code eur">€</span><span class="name">Євро</span><b id="eur">··</b></span>
+      <span class="rate"><span class="code btc">₿</span><span class="name">Біткоїн</span><b id="btc">··</b><i id="btc-change"></i></span>
+      <small id="rates-age">НБУ · CoinGecko</small>
+    </button>
+    <button class="card settings" id="settings-button" data-ui="settings" aria-label="Налаштування"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 17h16M8 4v6M16 14v6"/></svg></button>
+  </header>
+
+  <section class="widgets">
+    <button class="card map-card" id="map-card" data-action="map" aria-label="Відкрити карту тривог на весь екран">
+      <span class="eyebrow">ЖИТОМИРЩИНА · КИЇВЩИНА</span>
+      <span class="map-title">Тривоги та загрози</span>
+      <svg class="map-art" viewBox="0 0 300 150" aria-hidden="true">
+        <g transform="translate(150 75)">
+          <path class="sweep" d="M0 0L0 -64A64 64 0 0 1 55.4 -32Z"/>
+          <circle class="ring" r="64"/><circle class="ring" r="43"/><circle class="ring" r="22"/>
+          <path class="ring" d="M-74 0H74M0 -70V70"/>
+          <circle class="blip" cx="28" cy="-20" r="4.5"/><circle class="blip" cx="-30" cy="24" r="4.5"/>
+          <circle class="center" r="5"/>
+        </g>
+      </svg>
+      <span class="open">Відкрити карту на весь екран <b>OK</b></span>
+      <small id="map-source">NEPTUN · онлайн-моніторинг, не офіційне оповіщення</small>
+    </button>
+    <article class="card power-panel">
+      <div class="panel-title">
+        <div><span class="eyebrow">ЖИТОМИРОБЛЕНЕРГО · КОРОСТИШІВ</span><h2>Світло вдома</h2></div>
+        <svg class="bolt" viewBox="0 0 24 24"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg>
+      </div>
+      <div class="power-grid">
+        <div class="address-block">
+          <span class="label-small" id="address-label">Ваша адреса</span>
+          <div class="power-status"><span id="address-dot" class="status-dot"></span><h3 id="address-title">Перевіряю адресу</h3></div>
+          <p id="address-text">Дані оператора за вашою адресою завантажуються.</p>
+          <p id="address-next" class="next"></p>
+        </div>
+        <div class="queue-block">
+          <span class="label-small" id="queue-label">Черга 3.1</span>
+          <h4 id="power-title">Перевіряю графік</h4>
+          <p id="power-description">Графік черги завантажується з сайту оператора.</p>
+          <div id="timeline" class="timeline"></div>
+          <div class="hours"><span>00</span><span>06</span><span>12</span><span>18</span><span>24</span></div>
+        </div>
+      </div>
+      <div class="power-actions"><span id="power-age">Завантаження</span><span><button data-action="power" class="pill">Сайт оператора ↗</button><button data-ui="queue" class="link">Моя черга</button></span></div>
+    </article>
+  </section>
+
+  <section class="apps" aria-label="Програми">
+    <button class="tile" id="trinity" data-action="app" data-find="trinity" data-title="Trinity" aria-label="Trinity"><span class="art"><img alt=""><span class="fallback">Trinity</span></span><span class="label">Trinity<small>Телеканали</small></span></button>
+    <button class="tile" id="youtube" data-action="app" data-pkg="com.google.android.youtube.tv" data-title="YouTube" aria-label="YouTube"><span class="art"><img alt=""><span class="fallback">YouTube</span></span><span class="label">YouTube<small>Відео</small></span></button>
+    <button class="tile" id="browser" data-action="app" data-pkg="com.internet.tvbrowser" data-title="Браузер" data-fallback="browser" data-art="browser.svg" aria-label="Браузер"><span class="art"><img alt="" src="browser.svg"><span class="fallback">Браузер</span></span><span class="label">Браузер<small>Пошук і сайти</small></span></button>
+    <button class="tile" id="play" data-action="app" data-pkg="com.android.vending" data-title="Play Маркет" aria-label="Play Маркет"><span class="art"><img alt=""><span class="fallback">Play Маркет</span></span><span class="label">Play Маркет<small>Програми</small></span></button>
+  </section>
+</main>
+<div id="modal" hidden><section class="dialog" role="dialog" aria-modal="true" aria-labelledby="dialog-title"><div class="eyebrow">XIAOMI TV · РОДИНА</div><h2 id="dialog-title">Налаштування</h2><div id="dialog-body"></div><button class="pill close" data-ui="close">Готово</button></section></div>
+<script src="power.js"></script><script src="home.js"></script>
+</body></html>
