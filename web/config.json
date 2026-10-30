@@ -30,6 +30,8 @@
     "screensaver": "fireplace",
     "queue": "3.1"
   },
-  "kitchen": {},
+  "kitchen": {
+    "message": {"id": "2026-10-30-mama", "text": "Привіт, мама! Я слідкую за тобою :)))", "background": "#1f8f3a", "seconds": 30, "until": "2026-11-01T17:52Z"}
+  },
   "bedroom": {}
 }

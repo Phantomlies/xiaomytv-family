@@ -1,9 +1,9 @@
 {
   "format": 1,
   "repo": "Phantomlies/xiaomytv-family",
-  "serial": 1793144146,
-  "note": "Перша версія: камін на заставці, вибір заставки в меню",
-  "createdAt": "2026-10-27T23:35:46.749Z",
+  "serial": 1793382839,
+  "note": "Кухня: повідомлення для мами",
+  "createdAt": "2026-10-30T17:53:59.929Z",
   "minApk": 31000,
   "web": {
     "bg/dawn.jpg": {
@@ -35,16 +35,16 @@
       "size": 921
     },
     "config.json": {
-      "sha256": "37bb16c8aad660f1239eb5fe85af799ad5c4c44cfbff8fd586a4fcabca487af4",
-      "size": 1859
+      "sha256": "a0d132baecf908e7c3b7ec013c4eebfdb5d77b58e20c1ac8d87bc8678ba61299",
+      "size": 2047
     },
     "home.css": {
-      "sha256": "e4a08be3f7abf147bcfbca1f4cdab767ac15486d7d1d78cd9352fb740d16b781",
-      "size": 9175
+      "sha256": "fe7c3ebb5d0d15ba2aaee8dd51393d1f4b45fc17dbecc68cd1d041175addf9e4",
+      "size": 9397
     },
     "home.js": {
-      "sha256": "9e5b92fa5fcab028880988bdf1f11ca5f98d5c1a0e8e34179d94505ce4900596",
-      "size": 28519
+      "sha256": "93b1204f449077a0cddb813c96e9a456a4ca781c04b19550ff1d67948a0fc67d",
+      "size": 29965
     },
     "index.html": {
       "sha256": "b15d7f72e67be6737a186856a4306b81def92ca0440636b50c558e64855e75da",

@@ -404,9 +404,31 @@ window.onerror = function (message, source, line) { window.familyError = message
     if (running && dimMinutes > 0 && $('modal').hidden && Date.now() - lastInput >= dimMinutes * 60000) document.body.classList.add('dimmed');
   }, 15000);
 
+  // A full-screen note from Roman, config "message": { id, text, image, background, color, seconds, until }.
+  // Shown once per id; the seconds count only while the home screen is on screen. Any key closes it.
+  var note = null, noteLeft = 0;
+  function showMessage(m) {
+    if (!m || !m.id || (!m.text && !m.image) || localStorage.getItem('family.message') === String(m.id)) return;
+    if (m.until && Date.now() > new Date(m.until).getTime()) return;
+    note = document.createElement('div'); note.id = 'message'; note.dataset.id = m.id;
+    note.style.background = m.background || '#1f8f3a'; note.style.color = m.color || '#fff';
+    if (m.image) { note.style.backgroundImage = 'url(' + m.image + ')'; note.style.backgroundSize = 'contain'; note.style.backgroundRepeat = 'no-repeat'; note.style.backgroundPosition = 'center'; }
+    if (m.text) note.textContent = m.text;
+    document.body.appendChild(note);
+    noteLeft = (Number(m.seconds) || 30);
+    wake();
+  }
+  function closeMessage() {
+    if (!note) return false;
+    try { localStorage.setItem('family.message', note.dataset.id); } catch (_) {}
+    note.parentNode.removeChild(note); note = null; lastInput = Date.now();
+    return true;
+  }
+  setInterval(function () { if (note && running && !document.hidden && --noteLeft <= 0) closeMessage(); }, 1000);
+
   document.addEventListener('keydown', function (event) {
     var key = event.key || '';
-    if (wake()) { event.preventDefault(); return; }
+    if (closeMessage() || wake()) { event.preventDefault(); return; }
     if (key.indexOf('Arrow') === 0) { event.preventDefault(); focusMove(key); }
     else if (key === 'Enter' || key === ' ') {
       event.preventDefault();
@@ -414,9 +436,9 @@ window.onerror = function (message, source, line) { window.familyError = message
     } else if (key === 'Escape' || key === 'Backspace') { event.preventDefault(); window.familyBack(); }
   });
 
-  window.familyBack = function () { if (wake()) return; if (!$('modal').hidden) closeModal(); else firstTile().focus(still); };
-  window.familyMenu = function () { if (wake()) return; if ($('modal').hidden) openModal('settings'); else closeModal(); };
-  window.familyHome = function () { wake(); if (!$('modal').hidden) $('modal').hidden = true; firstTile().focus(still); };
+  window.familyBack = function () { if (closeMessage() || wake()) return; if (!$('modal').hidden) closeModal(); else firstTile().focus(still); };
+  window.familyMenu = function () { if (closeMessage() || wake()) return; if ($('modal').hidden) openModal('settings'); else closeModal(); };
+  window.familyHome = function () { closeMessage(); wake(); if (!$('modal').hidden) $('modal').hidden = true; firstTile().focus(still); };
   // Android moves focus into the WebView on its own; put it back on the tile used last.
   var lastTile = null;
   $('home').addEventListener('focusin', function (event) { if (event.target.classList.contains('tile')) lastTile = event.target; });
@@ -448,6 +470,7 @@ window.onerror = function (message, source, line) { window.familyError = message
     if (focused || !document.activeElement || document.activeElement === document.body) firstTile().focus(still);
   }).catch(function () {}).then(function () {
     showMapSource(); bindPower(); loadArt();
+    try { showMessage(config.message); } catch (_) {}
     window.familyStatus = { tiles: tiles().length, config: !!about.config };
     window.familyReady = true;
   });
